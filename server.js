@@ -1,7 +1,3 @@
-app.get('/brawl/*', async (req, res) => {
-    const path = req.params[0]; // Esto toma lo que sigue después de /brawl/
-estoy totalmente seguro que la parte de la ruta no esta sienod tomada
-
 const express = require('express');
 const axios = require('axios');
 const app = express();
