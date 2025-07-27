@@ -17,7 +17,7 @@ app.get('/brawl/*', async (req, res) => {
         });
         res.json(response.data);
     } catch (error) {
-        res.status(error.response?.status || 500).json({req});
+        res.status(req);
     }
 });
 
