@@ -10,9 +10,9 @@ const TOKEN = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtY
 app.get('/brawl/*', async (req, res) => {
     const path = req.params[0]; // Esto toma lo que sigue después de /brawl/
     try {
-        const response = await axios.get(https://api.brawlstars.com/v1/${path}/%238YQYUULG0, {
+        const response = await axios.get(`https://api.brawlstars.com/v1/${path}/%238YQYUULG0`, {
             headers: {
-                Authorization: Bearer ${TOKEN}
+                Authorization: `Bearer ${TOKEN}`
             }
         });
         res.json(response.data);
@@ -22,5 +22,5 @@ app.get('/brawl/*', async (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(Servidor corriendo en puerto ${PORT});
+    console.log(`Servidor corriendo en puerto ${PORT}`);
 });
